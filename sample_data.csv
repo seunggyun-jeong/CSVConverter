@@ -1,0 +1,5 @@
+﻿팀 번호,팀 이름,세션,Members,App statement,Repository URL,주요 기술
+1,애플팀,오전,"규니(Gyunni), 멘토(Mentor)",엄청난 앱,https://www.github.com,"SceneKit, HomeKit"
+2,아카데미팀,오전,"멘토1(Mentor1), 멘토2(Mentor2)",레전드 앱,https://www.github.com,"RoomPlan, HealthKit"
+1,레전드팀,오후,"멘토3(Mentor3), 멘토4(Mentor4)",짱짱쎈 앱,https://www.github.com,"Wallet, SensitiveContentAnalysis"
+2,슈퍼노바,오후,"멘토5(Mentor5), 멘토5(Mentor5)",슈슈슈슈퍼노바,https://www.github.com,"Siri, Notification"
