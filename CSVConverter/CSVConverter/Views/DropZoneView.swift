@@ -10,15 +10,25 @@ import UniformTypeIdentifiers
 
 struct DropZoneView: View {
   @Bindable var viewModel: CSVViewModel
+  @Binding var path: NavigationPath
   
   var body: some View {
     ZStack {
       RoundedRectangle(cornerRadius: 10)
-        .fill(viewModel.isHovering ? Color.blue.opacity(0.3) : Color.gray.opacity(0.3))
+        .stroke(style: StrokeStyle(lineWidth: 3, dash: [3, 3]))
+        .foregroundStyle(viewModel.isHovering ? Color.accentColor : Color.secondary)
         .frame(width: 300, height: 200)
       
-      Text("Drop CSV file here")
-        .foregroundColor(.primary)
+      VStack {
+        Image(systemName: "icloud.and.arrow.down")
+          .resizable()
+          .scaledToFit()
+          .frame(width: 30)
+          .foregroundStyle(viewModel.isHovering ? Color.accentColor : Color.secondary)
+        Text("Drop CSV file here")
+          .foregroundStyle(viewModel.isHovering ? Color.accentColor : Color.secondary)
+        
+      }
     }
     .onDrop(of: [UTType.fileURL], isTargeted: $viewModel.isHovering) { providers in
       guard let provider = providers.first else { return false }
@@ -27,22 +37,34 @@ struct DropZoneView: View {
         if let urlData = urlData as? Data {
           let url = NSURL(absoluteURLWithDataRepresentation: urlData, relativeTo: nil) as URL
           if url.pathExtension.lowercased() == "csv" {
+            print(url.lastPathComponent)
             self.viewModel.loadCSV(from: url)
+            path.append(NavigationViewItem.csvEditorView)
           }
         }
       }
       
       return true
     }
+    .navigationDestination(for: NavigationViewItem.self) { view in
+      if view == .csvEditorView {
+        CSVEditorView(viewModel: viewModel)
+      }
+    }
   }
 }
 
 #Preview("DropZoneView - Normal") {
-  DropZoneView(viewModel: CSVViewModel())
+  DropZoneView(viewModel: CSVViewModel(), path: .constant(NavigationPath()))
 }
 
 #Preview("DropZoneView - Hovering") {
   let viewModel = CSVViewModel()
   viewModel.isHovering = true
-  return DropZoneView(viewModel: viewModel)
+  return DropZoneView(viewModel: viewModel, path: .constant(NavigationPath()))
+}
+
+enum NavigationViewItem: Hashable {
+  case dropZone
+  case csvEditorView
 }

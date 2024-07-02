@@ -14,16 +14,6 @@ struct CSVEditorView: View {
   
   var body: some View {
     VStack {
-      HStack {
-        Text("CSV Editor")
-          .font(.title)
-        Spacer()
-        Button("Save") {
-          saveCSV()
-        }
-      }
-      .padding()
-      
       if !viewModel.csvData.rows.isEmpty {
         ScrollView {
           VStack(alignment: .leading, spacing: 10) {
@@ -55,6 +45,19 @@ struct CSVEditorView: View {
       }
     }
     .frame(minWidth: 600, minHeight: 400)
+    .navigationTitle(viewModel.csvData.fileName)
+    .onDisappear {
+      viewModel.csvData = CSVData(fileName: "", headers: [], rows: [])
+    }
+    .toolbar {
+      ToolbarItem(placement: .confirmationAction) {
+        Button {
+          saveCSV()
+        } label: {
+          Image(systemName: "square.and.arrow.down")
+        }
+      }
+    }
   }
   
   private func saveCSV() {
@@ -77,7 +80,7 @@ struct CSVEditorView: View {
 #Preview("CSVEditorView - With Data") {
   let viewModel = CSVViewModel()
   viewModel.csvData = CSVData(
-    headers: ["Name", "Age", "City"],
+    fileName: "NewFile", headers: ["Name", "Age", "City"],
     rows: [
       CSVRow(data: ["John Doe", "30", "New York"]),
       CSVRow(data: ["Jane Smith", "28", "San Francisco"]),

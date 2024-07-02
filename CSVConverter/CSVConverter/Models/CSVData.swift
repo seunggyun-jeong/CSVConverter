@@ -8,6 +8,7 @@
 import Foundation
 
 struct CSVData {
+  var fileName: String
   var headers: [String]
   var rows: [CSVRow]
 }

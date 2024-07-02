@@ -10,20 +10,21 @@ import UniformTypeIdentifiers
 
 @Observable
 class CSVViewModel {
-  var csvData = CSVData(headers: [], rows: [])
+  var csvData = CSVData(fileName: "", headers: [], rows: [])
   var isHovering = false
   
   func loadCSV(from url: URL) {
     do {
       let content = try String(contentsOf: url)
+      print(content)
       let rows = parseCSV(content)
       
       if !rows.isEmpty {
         let headers = rows[0]
         let dataRows = rows.dropFirst().map { CSVRow(data: $0) }
-        csvData = CSVData(headers: headers, rows: dataRows)
+        csvData = CSVData(fileName: url.lastPathComponent, headers: headers, rows: dataRows)
       } else {
-        csvData = CSVData(headers: [], rows: [])
+        csvData = CSVData(fileName: "", headers: [], rows: [])
       }
     } catch {
       print("Error reading CSV file: \(error)")
