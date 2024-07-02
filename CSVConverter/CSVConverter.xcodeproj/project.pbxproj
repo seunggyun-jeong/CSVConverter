@@ -11,6 +11,10 @@
 		13BE10AE2C32881900FAB375 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BE10AD2C32881900FAB375 /* ContentView.swift */; };
 		13BE10B02C32881B00FAB375 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13BE10AF2C32881B00FAB375 /* Assets.xcassets */; };
 		13BE10B32C32881B00FAB375 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13BE10B22C32881B00FAB375 /* Preview Assets.xcassets */; };
+		13BE10E72C33D01100FAB375 /* CSVEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BE10E62C33D01100FAB375 /* CSVEditorView.swift */; };
+		13BE10ED2C33E2A200FAB375 /* CSVData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BE10EC2C33E2A200FAB375 /* CSVData.swift */; };
+		13BE10EF2C33E2C400FAB375 /* CSVViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BE10EE2C33E2C400FAB375 /* CSVViewModel.swift */; };
+		13BE10F12C33E2FA00FAB375 /* DropZoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BE10F02C33E2FA00FAB375 /* DropZoneView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,11 @@
 		13BE10AF2C32881B00FAB375 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13BE10B22C32881B00FAB375 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		13BE10B42C32881B00FAB375 /* CSVConverter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CSVConverter.entitlements; sourceTree = "<group>"; };
+		13BE10E62C33D01100FAB375 /* CSVEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVEditorView.swift; sourceTree = "<group>"; };
+		13BE10EC2C33E2A200FAB375 /* CSVData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVData.swift; sourceTree = "<group>"; };
+		13BE10EE2C33E2C400FAB375 /* CSVViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVViewModel.swift; sourceTree = "<group>"; };
+		13BE10F02C33E2FA00FAB375 /* DropZoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropZoneView.swift; sourceTree = "<group>"; };
+		13BE10F22C33F20A00FAB375 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +61,11 @@
 		13BE10AA2C32881900FAB375 /* CSVConverter */ = {
 			isa = PBXGroup;
 			children = (
-				13BE10AB2C32881900FAB375 /* CSVConverterApp.swift */,
-				13BE10AD2C32881900FAB375 /* ContentView.swift */,
+				13BE10F22C33F20A00FAB375 /* Info.plist */,
+				13BE10EB2C33E29400FAB375 /* Models */,
+				13BE10EA2C33E28F00FAB375 /* Views */,
+				13BE10E92C33E28800FAB375 /* ViewModels */,
+				13BE10E82C33E27A00FAB375 /* App */,
 				13BE10AF2C32881B00FAB375 /* Assets.xcassets */,
 				13BE10B42C32881B00FAB375 /* CSVConverter.entitlements */,
 				13BE10B12C32881B00FAB375 /* Preview Content */,
@@ -67,6 +79,40 @@
 				13BE10B22C32881B00FAB375 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		13BE10E82C33E27A00FAB375 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				13BE10AB2C32881900FAB375 /* CSVConverterApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		13BE10E92C33E28800FAB375 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				13BE10EE2C33E2C400FAB375 /* CSVViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		13BE10EA2C33E28F00FAB375 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				13BE10AD2C32881900FAB375 /* ContentView.swift */,
+				13BE10F02C33E2FA00FAB375 /* DropZoneView.swift */,
+				13BE10E62C33D01100FAB375 /* CSVEditorView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		13BE10EB2C33E29400FAB375 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				13BE10EC2C33E2A200FAB375 /* CSVData.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +185,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13BE10E72C33D01100FAB375 /* CSVEditorView.swift in Sources */,
+				13BE10EF2C33E2C400FAB375 /* CSVViewModel.swift in Sources */,
 				13BE10AE2C32881900FAB375 /* ContentView.swift in Sources */,
 				13BE10AC2C32881900FAB375 /* CSVConverterApp.swift in Sources */,
+				13BE10ED2C33E2A200FAB375 /* CSVData.swift in Sources */,
+				13BE10F12C33E2FA00FAB375 /* DropZoneView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +329,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CSVConverter/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -306,6 +357,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CSVConverter/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
