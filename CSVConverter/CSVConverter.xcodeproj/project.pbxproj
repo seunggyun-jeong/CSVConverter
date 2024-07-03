@@ -15,6 +15,7 @@
 		13BE10ED2C33E2A200FAB375 /* CSVData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BE10EC2C33E2A200FAB375 /* CSVData.swift */; };
 		13BE10EF2C33E2C400FAB375 /* CSVViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BE10EE2C33E2C400FAB375 /* CSVViewModel.swift */; };
 		13BE10F12C33E2FA00FAB375 /* DropZoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BE10F02C33E2FA00FAB375 /* DropZoneView.swift */; };
+		13BE10F42C356A9300FAB375 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BE10F32C356A9300FAB375 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		13BE10EE2C33E2C400FAB375 /* CSVViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVViewModel.swift; sourceTree = "<group>"; };
 		13BE10F02C33E2FA00FAB375 /* DropZoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropZoneView.swift; sourceTree = "<group>"; };
 		13BE10F22C33F20A00FAB375 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		13BE10F32C356A9300FAB375 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				13BE10AB2C32881900FAB375 /* CSVConverterApp.swift */,
+				13BE10F32C356A9300FAB375 /* AppDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				13BE10EF2C33E2C400FAB375 /* CSVViewModel.swift in Sources */,
 				13BE10AE2C32881900FAB375 /* ContentView.swift in Sources */,
 				13BE10AC2C32881900FAB375 /* CSVConverterApp.swift in Sources */,
+				13BE10F42C356A9300FAB375 /* AppDelegate.swift in Sources */,
 				13BE10ED2C33E2A200FAB375 /* CSVData.swift in Sources */,
 				13BE10F12C33E2FA00FAB375 /* DropZoneView.swift in Sources */,
 			);

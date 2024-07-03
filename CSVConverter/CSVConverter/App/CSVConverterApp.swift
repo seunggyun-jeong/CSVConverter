@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct CSVConverterApp: App {
+  @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
   @State private var path = NavigationPath()
   
   var body: some Scene {
