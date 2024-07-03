@@ -57,6 +57,14 @@ struct CSVEditorView: View {
           Image(systemName: "square.and.arrow.down")
         }
       }
+      
+      ToolbarItem(placement: .confirmationAction) {
+        Button {
+          saveToMD()
+        } label: {
+          Text("MD로 저장")
+        }
+      }
     }
   }
   
@@ -73,6 +81,23 @@ struct CSVEditorView: View {
     
     if response == .OK, let url = savePanel.url {
       viewModel.saveCSV(to: url)
+    }
+  }
+  
+  private func saveToMD() {
+    let savePanel = NSSavePanel()
+    savePanel.allowedContentTypes = [UTType.markdown]
+    savePanel.canCreateDirectories = true
+    savePanel.isExtensionHidden = false
+    savePanel.title = "Save MD File"
+    savePanel.message = "Choose a location to save the MD file"
+    savePanel.nameFieldStringValue = "exported.md"
+    
+    let response = savePanel.runModal()
+    
+    if response == .OK, let url = savePanel.url {
+      print(url)
+      viewModel.saveToMD(to: url)
     }
   }
 }

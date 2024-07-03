@@ -4,5 +4,32 @@
 <dict>
 	<key>NSQuitAlwaysKeepsWindows</key>
 	<true/>
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeReferenceURL</key>
+			<string>https://daringfireball.net/projects/markdown/</string>
+			<key>UTTypeIconFile</key>
+			<string>markdown-icon</string>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.text</string>
+			</array>
+			<key>UTTypeIdentifier</key>
+			<string>net.daringfireball.markdown</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.mime-type</key>
+				<array>
+					<string>text/markdown</string>
+				</array>
+				<key>public.filename-extension</key>
+				<array>
+					<string>md</string>
+					<string>markdown</string>
+				</array>
+			</dict>
+		</dict>
+	</array>
 </dict>
 </plist>

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import UniformTypeIdentifiers
+import CreateML
 
 struct DropZoneView: View {
   @Bindable var viewModel: CSVViewModel
@@ -37,9 +38,15 @@ struct DropZoneView: View {
         if let urlData = urlData as? Data {
           let url = NSURL(absoluteURLWithDataRepresentation: urlData, relativeTo: nil) as URL
           if url.pathExtension.lowercased() == "csv" {
-            print(url.lastPathComponent)
-            self.viewModel.loadCSV(from: url)
-            path.append(NavigationViewItem.csvEditorView)
+            do {
+              print(url.lastPathComponent)
+              var tableData = try MLDataTable(contentsOf: url)
+              self.viewModel.loadCSV(from: tableData, fileName: url.lastPathComponent)
+              self.viewModel.loadCSV(from: url)
+              path.append(NavigationViewItem.csvEditorView)
+            } catch {
+              print(error)
+            }
           }
         }
       }
