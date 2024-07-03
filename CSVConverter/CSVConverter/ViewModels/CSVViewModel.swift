@@ -108,23 +108,14 @@ class CSVViewModel {
     do {
       var mdString = ""
       tableData.data.forEach { row in
-        var resultString = ""
-        row.forEach { key, value in
-          if key == "팀 번호" {
-            resultString += "#### Pair \(value.intValue ?? 0)"
-          } else if key == "팀 이름" {
-            resultString += "| \(value.stringValue ?? "")\n"
-          } else if key == "Members" {
-            resultString += "- Member : \(value.stringValue ?? "")\n\n"
-          } else if key == "App statement" {
-            resultString += "> \(value.stringValue ?? "")\n"
-          } else if key == "Repository URL" {
-            resultString += "- [🔗 Repository](\(value.stringValue ?? ""))\n"
-          } else if key == "주요 기술" {
-            resultString += "- \(value.stringValue ?? "")\n"
-          }
-        }
-        
+        var resultString = 
+                          """
+                          #### Pair \(row[GitHubArchiveColumn.teamNumber.rawValue]?.intValue ?? 0) | \(row[GitHubArchiveColumn.teamName.rawValue]?.stringValue ?? "")
+                          > \(row[GitHubArchiveColumn.appStatement.rawValue]?.stringValue ?? "")
+                          - \(row[GitHubArchiveColumn.topic.rawValue]?.stringValue ?? "")
+                          - [🔗 Repository](\(row[GitHubArchiveColumn.url.rawValue]?.stringValue ?? ""))
+                          - Member : \(row[GitHubArchiveColumn.members.rawValue]?.stringValue ?? "")\n\n
+                          """
         mdString += resultString
       }
       
@@ -133,4 +124,13 @@ class CSVViewModel {
       print(error)
     }
   }
+}
+
+enum GitHubArchiveColumn: String {
+  case teamNumber = "팀 번호"
+  case teamName = "팀 이름"
+  case members = "Members"
+  case appStatement = "App statement"
+  case url = "Repository URL"
+  case topic = "주요 기술"
 }
