@@ -18,6 +18,10 @@
 		13BE10F42C356A9300FAB375 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BE10F32C356A9300FAB375 /* AppDelegate.swift */; };
 		13BE10F72C358B9000FAB375 /* Ex+ UTType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BE10F62C358B9000FAB375 /* Ex+ UTType.swift */; };
 		13BE10F92C3645E800FAB375 /* TableTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BE10F82C3645E800FAB375 /* TableTestView.swift */; };
+		13BE10FB2C37CB6800FAB375 /* CSVTableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BE10FA2C37CB6700FAB375 /* CSVTableManager.swift */; };
+		13BE10FD2C37CE9800FAB375 /* FileListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BE10FC2C37CE9800FAB375 /* FileListView.swift */; };
+		13BE10FF2C37D1F300FAB375 /* ToolBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BE10FE2C37D1F300FAB375 /* ToolBoxView.swift */; };
+		13BE11012C37E04100FAB375 /* NavigationViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BE11002C37E04100FAB375 /* NavigationViewItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +39,10 @@
 		13BE10F32C356A9300FAB375 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13BE10F62C358B9000FAB375 /* Ex+ UTType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+ UTType.swift"; sourceTree = "<group>"; };
 		13BE10F82C3645E800FAB375 /* TableTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableTestView.swift; sourceTree = "<group>"; };
+		13BE10FA2C37CB6700FAB375 /* CSVTableManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVTableManager.swift; sourceTree = "<group>"; };
+		13BE10FC2C37CE9800FAB375 /* FileListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileListView.swift; sourceTree = "<group>"; };
+		13BE10FE2C37D1F300FAB375 /* ToolBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBoxView.swift; sourceTree = "<group>"; };
+		13BE11002C37E04100FAB375 /* NavigationViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				13BE10EE2C33E2C400FAB375 /* CSVViewModel.swift */,
+				13BE10FA2C37CB6700FAB375 /* CSVTableManager.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -112,6 +121,8 @@
 				13BE10F02C33E2FA00FAB375 /* DropZoneView.swift */,
 				13BE10E62C33D01100FAB375 /* CSVEditorView.swift */,
 				13BE10F82C3645E800FAB375 /* TableTestView.swift */,
+				13BE10FC2C37CE9800FAB375 /* FileListView.swift */,
+				13BE10FE2C37D1F300FAB375 /* ToolBoxView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -128,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				13BE10F62C358B9000FAB375 /* Ex+ UTType.swift */,
+				13BE11002C37E04100FAB375 /* NavigationViewItem.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -203,13 +215,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				13BE10E72C33D01100FAB375 /* CSVEditorView.swift in Sources */,
+				13BE10FB2C37CB6800FAB375 /* CSVTableManager.swift in Sources */,
 				13BE10EF2C33E2C400FAB375 /* CSVViewModel.swift in Sources */,
 				13BE10AE2C32881900FAB375 /* ContentView.swift in Sources */,
+				13BE10FD2C37CE9800FAB375 /* FileListView.swift in Sources */,
 				13BE10F92C3645E800FAB375 /* TableTestView.swift in Sources */,
+				13BE10FF2C37D1F300FAB375 /* ToolBoxView.swift in Sources */,
 				13BE10AC2C32881900FAB375 /* CSVConverterApp.swift in Sources */,
 				13BE10F42C356A9300FAB375 /* AppDelegate.swift in Sources */,
 				13BE10ED2C33E2A200FAB375 /* CSVData.swift in Sources */,
 				13BE10F72C358B9000FAB375 /* Ex+ UTType.swift in Sources */,
+				13BE11012C37E04100FAB375 /* NavigationViewItem.swift in Sources */,
 				13BE10F12C33E2FA00FAB375 /* DropZoneView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

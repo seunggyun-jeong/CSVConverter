@@ -9,14 +9,22 @@ import SwiftUI
 
 struct ContentView: View {
   @State private var viewModel = CSVViewModel()
+  @State private var tableManager = CSVTableManager()
   @Binding var path: NavigationPath
   
   var body: some View {
-    NavigationStack(path: $path) {
-      VStack {
-        DropZoneView(viewModel: viewModel, path: $path)
+    NavigationSplitView {
+      FileListView()
+    } content: {
+      NavigationStack(path: $path) {
+        DropZoneView(tableManager: tableManager, viewModel: viewModel, path: $path)
+          .navigationTitle("CSV To MarkDown")
       }
-      .frame(minWidth: 600, minHeight: 400)
+    } detail: {
+      if !viewModel.csvData.fileName.isEmpty {
+        ToolBoxView()
+          .navigationSplitViewColumnWidth(min: 50, ideal: 300, max: 500)
+      }
     }
   }
 }

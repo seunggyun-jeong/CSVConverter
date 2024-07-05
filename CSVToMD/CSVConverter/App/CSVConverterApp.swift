@@ -27,16 +27,3 @@ struct CSVConverterApp: App {
     }
   }
 }
-
-@Observable
-class AppState {
-    var isEditing = false
-    var canGoBack = false
-
-    func goBack() {
-        if isEditing {
-            isEditing = false
-            canGoBack = false
-        }
-    }
-}
