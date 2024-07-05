@@ -17,6 +17,7 @@
 		13BE10F12C33E2FA00FAB375 /* DropZoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BE10F02C33E2FA00FAB375 /* DropZoneView.swift */; };
 		13BE10F42C356A9300FAB375 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BE10F32C356A9300FAB375 /* AppDelegate.swift */; };
 		13BE10F72C358B9000FAB375 /* Ex+ UTType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BE10F62C358B9000FAB375 /* Ex+ UTType.swift */; };
+		13BE10F92C3645E800FAB375 /* TableTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BE10F82C3645E800FAB375 /* TableTestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		13BE10F22C33F20A00FAB375 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		13BE10F32C356A9300FAB375 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13BE10F62C358B9000FAB375 /* Ex+ UTType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+ UTType.swift"; sourceTree = "<group>"; };
+		13BE10F82C3645E800FAB375 /* TableTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableTestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				13BE10AD2C32881900FAB375 /* ContentView.swift */,
 				13BE10F02C33E2FA00FAB375 /* DropZoneView.swift */,
 				13BE10E62C33D01100FAB375 /* CSVEditorView.swift */,
+				13BE10F82C3645E800FAB375 /* TableTestView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				13BE10E72C33D01100FAB375 /* CSVEditorView.swift in Sources */,
 				13BE10EF2C33E2C400FAB375 /* CSVViewModel.swift in Sources */,
 				13BE10AE2C32881900FAB375 /* ContentView.swift in Sources */,
+				13BE10F92C3645E800FAB375 /* TableTestView.swift in Sources */,
 				13BE10AC2C32881900FAB375 /* CSVConverterApp.swift in Sources */,
 				13BE10F42C356A9300FAB375 /* AppDelegate.swift in Sources */,
 				13BE10ED2C33E2A200FAB375 /* CSVData.swift in Sources */,

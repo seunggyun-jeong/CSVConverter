@@ -111,8 +111,7 @@ class CSVViewModel {
         var resultString = 
                           """
                           #### Pair \(row[GitHubArchiveColumn.teamNumber.rawValue]?.intValue ?? 0) | \(row[GitHubArchiveColumn.teamName.rawValue]?.stringValue ?? "")
-                          > \(row[GitHubArchiveColumn.appStatement.rawValue]?.stringValue ?? "")
-                          - \(row[GitHubArchiveColumn.topic.rawValue]?.stringValue ?? "")
+                          > \(row[GitHubArchiveColumn.appStatement.rawValue]?.stringValue ?? "") \(row[GitHubArchiveColumn.topic.rawValue]?.stringValue ?? "" == "" ? "" : "\n- \(row[GitHubArchiveColumn.topic.rawValue]?.stringValue ?? "" )")
                           - [🔗 Repository](\(row[GitHubArchiveColumn.url.rawValue]?.stringValue ?? ""))
                           - Member : \(row[GitHubArchiveColumn.members.rawValue]?.stringValue ?? "")\n\n
                           """

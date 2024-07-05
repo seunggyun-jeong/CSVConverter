@@ -39,3 +39,9 @@ struct CSVRow: Identifiable {
   let id = UUID()
   var data: [String]
 }
+
+struct TableDataTest {
+  var fileName: String
+  var headers: [String]
+  var data: [[MLDataTable.Row.Key]]
+}
